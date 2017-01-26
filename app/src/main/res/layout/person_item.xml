@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:id="@+id/first_line_container"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/person_item_name_container"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true">
+
+            <TextView
+                android:id="@+id/person_item_name_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/tap_to_edit_name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:gravity="bottom|left"
+                android:paddingBottom="2dp"
+                android:visibility="visible"
+                android:textSize="20sp"
+                />
+
+            <com.frostox.util.taxbaato.custom_views.DismissableEditText
+                android:id="@+id/person_item_name_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/hint_person_name"
+                android:ems="10"
+                android:visibility="gone"
+                android:imeOptions="actionDone"
+                android:inputType="textCapWords"
+                android:lines="1"
+                android:textSize="20sp"
+                android:gravity="bottom|left"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true">
+
+            <TextView
+                android:id="@+id/paid_amount_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="paid amount"
+                android:gravity="end|bottom"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <com.frostox.util.taxbaato.custom_views.DismissableEditText
+                android:id="@+id/paid_amount_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/hint_person_amount"
+                android:ems="6"
+                android:visibility="invisible"
+                android:imeOptions="actionDone"
+                android:inputType="numberDecimal"
+                android:lines="1"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <FrameLayout
+        android:id="@+id/person_item_amount_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/first_line_container"
+        android:layout_toLeftOf="@+id/person_item_plus"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/person_item_amount_textview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Tap to edit amount"
+            android:alpha="0.8"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:gravity="center|left"
+            android:paddingBottom="2dp"
+            android:visibility="visible"
+            />
+
+        <com.frostox.util.taxbaato.custom_views.DismissableEditText
+            android:id="@+id/person_item_amount_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/hint_person_amount"
+            android:ems="6"
+            android:visibility="invisible"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/person_item_total_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="$ 0"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:layout_alignBottom="@+id/person_item_amount_container"
+        android:textColor="@color/pomegranate"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/person_item_equal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" = "
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:layout_alignBottom="@+id/person_item_amount_container"
+        android:layout_toLeftOf="@id/person_item_total_amount"/>
+
+    <TextView
+        android:id="@+id/person_item_tax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="$ 0"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:layout_alignBottom="@+id/person_item_amount_container"
+        android:layout_toLeftOf="@+id/person_item_equal"/>
+
+    <TextView
+        android:id="@+id/person_item_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" + "
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="5dp"
+        android:layout_alignBottom="@+id/person_item_amount_container"
+        android:layout_toLeftOf="@+id/person_item_tax"/>
+
+
+
+
+</RelativeLayout>

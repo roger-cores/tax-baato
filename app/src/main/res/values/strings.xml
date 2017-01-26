@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TaxBaato</string>
+    <string name="action_add">Add</string>
+    <string name="hint_person_name">Name</string>
+    <string name="hint_person_amount">Amount</string>
+    <string name="tap_to_enter_total_amount">Tap to enter taxed amount</string>
+    <string name="tap_to_edit_name">Tap to edit name</string>
+    <string name="share_using">Choose an app</string>
+    <string name="preference_file_key">com.frostox.util.taxbaato</string>
+    <string name="dollar_symbol">$</string>
+    <string name="select_a_currency">Select a Currency</string>
+    <string name="about_us">About Us</string>
+    <string name="current_symbol">currencySymbol</string>
+    <string name="tap_to_enter_amount">Tap to enter amount</string>
+</resources>
